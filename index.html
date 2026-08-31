@@ -14,6 +14,21 @@
 
     gtag('config', 'AW-18337529095');
   </script>
+  <!-- Event snippet for Website lead conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18337529095/GHd6CJrsqOscEIf6gahE',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -44,7 +59,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="brand">Allied <span>Removals</span></div>
-      <a class="btn btn-call btn-sm" href="tel:+919545498686">Call 095454 98686</a>
+      <a class="btn btn-call btn-sm" href="tel:+919545498686" onclick="return gtag_report_conversion(this.href);">Call 095454 98686</a>
     </div>
   </div>
 
@@ -58,7 +73,7 @@
           packed with care by a trained crew, delivered on time. No surprises, no shortcuts.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-call" href="tel:+919545498686">
+          <a class="btn btn-call" href="tel:+919545498686" onclick="return gtag_report_conversion(this.href);">
             Call Now — 095454 98686
           </a>
           <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Allied+Removals+Packers+And+Movers+Shop+No+91+Sector+125+Sunny+Enclave+Kharar+Punjab+140301" target="_blank" rel="noopener">
@@ -153,7 +168,7 @@
           </div>
         </div>
         <div class="contact-ctas">
-          <a class="btn btn-call" href="tel:+919545498686">Call Now — 095454 98686</a>
+          <a class="btn btn-call" href="tel:+919545498686" onclick="return gtag_report_conversion(this.href);">Call Now — 095454 98686</a>
           <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Allied+Removals+Packers+And+Movers+Shop+No+91+Sector+125+Sunny+Enclave+Kharar+Punjab+140301" target="_blank" rel="noopener">Get Directions</a>
         </div>
       </div>
